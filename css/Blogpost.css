@@ -62,6 +62,64 @@ hr {
   font-family: 'Exo 2', sans-serif;
 }
 
+.jumbotron {
+  background-color: #f1f1f1;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron h1 {
+  color: #cb0404;
+  font-size: 45px;  
+  font-family: 'Exo 2', sans-serif;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.jumbotron h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.jumbotron a {
+  color: #007bb2;
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron li  {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+
+}
+
+.jumbotron p {
+  font-size: 20px;
+  font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron .disclaimer {
+	color: #cb0404;
+	font-size: 24px;
+	font-family: 'Roboto', sans-serif;
+}
+
+.jumbotron .phew {
+	font-size: 22px;
+
+}
+
 .footer .container {
   position: relative;
   bottom:10px;

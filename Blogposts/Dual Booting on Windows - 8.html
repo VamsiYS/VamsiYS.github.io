@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<title>Dual Booting on Windows 8 - VamsiYS</title>
+		<link rel="shortcut icon" href="..\images\icon.jpg" />
+		<meta name="author" content="Y.S.Vamsi">
+		<meta name="keywords" content="Vamsi, YS, Windows 8, Dual booting, UEFI, Secure boot, Fast boot, Ubuntu">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Exo+2|Roboto' rel='stylesheet' type='text/css'>
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="..\css\Blogpost.css">
+  </head>
+  
+	<body>
+		
+		<div class = "header" id = "gradheader">
+			<div class = "container">
+				<h1> <a href = Home.html>Vamsi Y.S.</a> </h1>
+				<p>Student | Developer | Blogger </p>
+			</div>
+		</div>
+		
+		<a href="https://github.com/VamsiYS" target = "blank"><img style="position: absolute; top: 0; right: 0; border: 0;" src="..\images\Forkme.png" alt="Fork me on GitHub"></a>
+		<hr>
+		<div class = "nav">
+			<div class = "container">
+				<ul class = "pull-left nav nav-pills">
+					<li><a href = ..\index.html>Home</a></li>
+					<li><a href = ..\Projects.html>Projects</a></li>
+					<li><a href = ..\Blog.html>Blog</a></li>
+					<li><a href = #>Notes</a></li>
+				</ul>
+				<ul class = "pull-right nav nav-pills">
+					<li><a href = #ContactMe>Contact Me</a></li>
+				</ul>
+			</div>	
+		</div>
+		<hr>
+		
+		<br>
+		<br>
+		<br>
+		
+		<div class = "jumbotron">
+			<div class = "container">
+				
+				<h1>Dual booting on Windows 8</h1>
+				<br>
+				
+				<p>
+					Almost all the computer geeks would agree that it is best to program and work on either Linux or a Mac OS X. 
+					Windows just doesn't give the right feel when you are programming. However, most of the new laptops come pre-installed with Windows 8 or Windows 8.1. 
+					With these operating systems, come the problems with UEFI, Secure Boot and Fast Boot, which prevent you from "Dual-booting your system".  
+					Okay, let me change that. With these operating systems, come the problems with UEFI, Secure Boot and Fast Boot, 
+					which prevent you from 'EASILY' Dual-booting your system. With some patience and the right guidance, it isn't really very difficult to dual boot your system. 
+					<br><br>
+					In this post, I have clearly written down all the steps that are involved in this process. I do not claim that I wrote all these without taking
+					inputs from other places. All I have done is to compile all the various procedures involved in dual booting your system. Feel free to share this with anyone and everyone. 
+					Happy Dual-booting!
+				</p>
+				
+				<br>
+				<p>
+					<h2>HURDLES : </h2><br>
+					<p>Before I give you the procedure to dual boot your system, let me try to explain what exactly are the hurdles we'll be facing in this process, 
+					that are making us work extra for achieving something useful. </p>
+					
+					<ul>
+					
+						<li><b>UEFI</b>: The Unified Extensible Firmware Interface (UEFI) is a specification that defines a software interface between an operating system and platform firmware. UEFI is meant to replace the Basic Input/Output System (BIOS) firmware interface, originally present in all IBM PC-compatible personal computers.
+
+							To understand the difference between BIOS and UEFI, you can visit this <a href = "http://superuser.com/questions/496026/what-is-the-difference-in-boot-with-bios-and-boot-with-uefi">link </a> and read the first answer. </li>
+					
+						<li><b>Secure Boot</b>: Microsoft Secure Boot is a component of Microsoft's Windows 8 operating system that relies on the UEFI specification's secure boot functionality to help prevent malicious software applications and "unauthorized" operating systems from loading during the system start-up process. 
+
+							This is one of the major things, that makes it difficult to install Linux on a Windows 8/8.1 system.</li>
+							
+						<li><b>Fast Boot</b>: Windows 8 comes with something called as Fast Boot. This makes the boot very fast. Windows 8 doesn’t really shut down, it just hibernates and hence it starts really fast.</li>
+					
+					</ul>
+
+					<p>All these things stand in the way of you installing Linux on your system and coding away in style. Now, if you want to proceed with the installation of <a href = "http://www.ubuntu.com">Ubuntu</a> (Substitute this with your choice of the flavour of Linux) for your system, let's get started. </p>
+				</p>
+				
+				<p class = "disclaimer">
+					Disclaimer: If you screw up in this process and lose data, please do not blame me. I am not responsible for the screw up. I have successfully dual booted my system as well as for my friends. Just stick to the process. If you face any minor problems, or are doubtful, <a href = "#ContactMe">try getting in touch.</a>
+				</p>
+				
+				<p>
+					<h2>Stuff to do before beginning with the process: </h2><br>
+					
+					<ul>
+					
+						<li> Be ready to restart your system about 5 - 6 times, just in case you miss out something.</li>
+					
+						<li>Have all the patience in the world, as sometimes it comes handy in this process.*</li>
+							
+						<li> If you are reading this, this might be your first time with this. Make sure you are not in a hurry and have about an hour with you.</li>
+						
+						<li>Have a pen drive by your side. You'll need it.*</li>
+						
+						<li> Backup all the IMPORTANT data. In case you screw up and lose your Windows, you should at least have the data.</li>
+						
+						<li>Make sure you have a backup of the Windows Operating System, which has been pre-installed on your system. *</li>
+					</ul>
+					
+					<p> * = Very important :P </p>
+				</p>
+			
+				<p>
+					<h2>Procedure to get rid of a HURDLE:</h2>
+					
+					<h3>DISABLING SECURE BOOT.</h3>
+					<ul>
+					
+						<li> Access your Charms bar (Win+C). Click the SETTINGS charm.</li>
+					
+						<li>Within the SETTINGS charm, click CHANGE PC SETTINGS</li>
+							
+						<li> <U>WINDOWS 8 USERS:</u><BR>
+								Select GENERAL, then click RESTART NOW under ADVANCED SETTINGS. You'll be asked to wait. This might take a minute or so, depending on your computer's abilities.</li>
+						
+						<li><u>WINDOWS 8.1 USERS:</u><br>
+								Select UPDATE AND RECOVERY, click on RECOVERY, then click RESTART NOW under ADVANCED SETTINGS. </li>
+						
+						<li> Within the new menu that appears, click TROUBLESHOOT, then click ADVANCED OPTIONS.</li>
+						
+						<li>Click on UEFI FIRMWARE SETTINGS. Notice all the twists and turns you had to take to get here. It's not over yet!</li>
+						
+						<li>Click the RESTART button and wait for the computer to successfully restart.</li>
+						
+						<li>Once the computer starts up, you'll need to access your BIOS. To do it, you have to press "Delete", "F1", or "F2", depending on your computer, on your keyboard as soon as the computer begins its power-on process again. Try each one and see if it works. Usually, the key is revealed at the startup splash screen in a message that says "Press <some key> to Enter Setup".</li>
+						
+						<ol class = "disclaimer">
+							Note:
+							<li> Each BIOS configuration utility is different. You'll have to intuitively navigate through the interface with my vague directions.</li>
+							<li> This is where you might have to keep restarting your system over and over again, to find the right key to enter the BIOS options.</li>
+						</ol>
+						
+						<li>8. Try to find a menu labelled SECURITY or SECURITY SETTINGS. Once you navigate to it, head straight down to SECURE BOOT CONFIGURATION. There's a possibility that you might have a SECURE BOOT option right when you arrive at the SECURITY menu, so look out for that also. Once you see a SECURE BOOT option, disable it and restart by pressing F10. This is often the magic key that saves your settings and restarts the computer. </li>
+					</ul>
+					
+					<br>
+					
+					<p class = "phew" ><b>PHEW! You have finally disabled the Secure Boot.</b></p>
+				</p>
+				
+				<p>
+					<h2>Procedure to install Linux:</h2>
+					<p>
+						This is a very long procedure. So, for the sake of easy understanding and avoiding confusion, I am dividing it into two sections. Let me call them GROUND WINDOWS and GROUND LINUX. These names indicate the Operating System you'll be working on in that section.
+						
+						<h3> GROUND WINDOWS: </h3>
+						<ul>
+					
+							<li> Get the .iso file for the flavour of Linux you want to install. (I recommend <a href = "http://www.ubuntu.com/download/desktop/install-ubuntu-desktop">Ubuntu 14.04</a> for those without any prior experience)</li>
+						
+							<li>Download the <a href = "http://www.linuxliveusb.com/">  Linux Live Booter from here</a>.</li>
+								
+							<li> Plug in your pen drive and run the Linux Live Booter. </li>
+							<ol>
+								<li>Choose the USB drive in the USB key</li>
+								<li>Select the source type and direct the Booter to the location of the .iso file</li>
+								<li>Format the USB drive before creating the LiveUSB.</li>
+								<li>Click CREATE.</li>
+							</ol>
+							
+							<li>While the LiveUSB is being created, let us sort out the other problems, one-by-one. </li>
+							
+							<li> To disable <b>FAST BOOT:</b></li>
+								<ol>
+									<li>Go to the Power Options in control panel. </li>
+									<li>Go to "Choose what the Power Buttons do". </li>
+									<li>Click/tap on the "Change settings that are currently unavailable" link at the top.</li>
+									<li>If prompted, click "YES"</li>
+									<li>Under Shut down settings, uncheck the Turn on fast startup box, and click/tap on the Save changes button.</li>
+									<li>Close this Window.</li>
+								</ol>
+							
+							<br>
+							
+							<p class = "disclaimer">Whenever you want to work on a dual boot, it is recommended to create separate partitions for each of the Operating Systems. Now, let's get going about with this. </p>
+							<li>Creating a partition for Linux:</li>
+								<ol>
+									<li>Right-Click on the left-bottom corner of the Windows 8/8.1 screen. In the pop-up, click on DISK MANAGEMENT.</li>
+									<li>In the Disk Management system, Right-click on the C drive and select SHRINK VOLUME. </li>
+									<li>Enter the amount of space you want to allocate to the Linux partition in MB. (I suggest you go with something between 50GB to 100GB). Click on SHRINK.</li>
+									<li>Once the Shrinking action is performed, Right-click on the UNALLOCATED AREA. Click on NEW SIMPLE VOLUME in the menu.</li>
+								</ol>
+							
+							<p>The new partition will be created in almost no time. Also, by this time, the LiveUSB must have been created. <br></p>
+							
+							<li> Let's move ahead : </li>
+							<ol>
+							
+								<li>Now that you have a LiveUSB in hand and a partition ready, waiting for you to install Linux, go to the settings charm on your system. (Move your cursor along the right hand side 'wall' of your system) and click on 'SETTINGS'.</li>
+								<li>Then, click on 'CHANGE PC SETTINGS'.</li>
+								<li>
+								<ul>
+									<li><u>WINDOWS 8 USERS:</u>
+								
+									Select 'GENERAL', then click RESTART NOW under ADVANCED SETTINGS. You'll be asked to wait. This might take a minute or so, depending on your computer’s abilities.</li>
+									<li><u>WINDOWS 8.1 USERS:</u>
+									Select UPDATE AND RECOVERY, click on RECOVERY, then click RESTART NOW under ADVANCED SETTINGS.</li>
+								</ul>	
+							<li> You have now reached the 'ADVANCED SETUP MENU' with some options. Since you have a LiveUSB (which runs on UEFI) plugged in, click on 'BOOT FROM A DEVICE'. In the next screen that appears, click on 'USB DRIVE (UEFI)'.</li>
+						</ul>
+						
+						<br>
+						
+						<p class = "disclaimer">WE HAVE COVERED ABOUT 70% OF THE PROCESS AS OF NOW. THIS IS THE LAST STEP THAT NEEDS TO BE PERFORMED ON WINDOWS, AS FAR AS THIS PROCESS IS CONCERNED. THE REST WILL BE DONE ON LINUX.</p>
+						<h3> GROUND LINUX: </h3>
+						
+						<ul>
+							<li>Once the system boots from the USB Drive, you'll see a page as shown below. Click on 'INSTALL UBUNTU'</li>
+							<li>Select the language of your system and click 'CONTINUE'.</li>
+							<li>In the next screen, it is advisable to check both the boxes and click "CONTINUE". However, if you do not have a working internet connection, take LITE and just click "CONTINUE".</li>
+							<li>In the next screen, Click on 'SOMETHING ELSE' and click CONTINUE. I REPEAT. Click on <b>'SOMETHING ELSE'</b>.</li>
+							
+							<p class = "disclaimer">
+								Note: If you click on CONTINUE, without changing the radio button, you are almost surely losing your Windows. Be warned. 
+							</p>
+				
+							<li>Be very careful in the next few steps.:</li>
+								<ol>
+									<li>In the next screen, you'll be asked to choose the partition to install Ubuntu into. Click the partition you have created for the same and click on the FORMAT check box. </li>
+									<li>In the pop-up that appears, click on the USE AS drop down menu. Select EXT4 JOURNALING FILE SYSTEM. Select the MOUNT POINT as / and click on OK.</li>
+									<li>Change the DEVICE FOR BOOT LOADER INSTALLATION to the same DEVICE NAME for your partition and click on INSTALL NOW.</li>
+								</ol>
+							<li>After this, there will not be many problems arising. Just keep on clicking on NEXT or CONTINUE until the system files are installed and the system asks for a REBOOT.</li>
+
+					</p>
+				</p>
+			</div>
+		</div>
+		
+		<div class = "footer" id = "gradfooter">
+			<a name = "ContactMe">
+				<div class = "container">
+					<div class = "row">
+						<div class = "col-md-4 pull-left">
+							<h3>Call Me:</h3>
+							<p>+91-8378988339</p>
+						</div>
+						<div class = "col-md-4 pull-right">
+							<h3>Mail Me:</h3>
+							<p><a href="mailto:ys.vamsi.05@gmail.com">ys[dot]vamsi[dot]05[at]gmail[dot]com</a></p>
+						</div>
+					</div>
+				</div>
+			</a>
+			<a href = http://www.facebook.com/vamsi.ys target = "blank"><img src = "..\images\facebook-icon.png" width = "45px" height = "45px" class = "img"></a>
+			<a href = https://twitter.com/VamsiYerramilli target = "blank"><img src = "..\images\twitter-icon.png" width = "45px" height = "45px" class = "img"></a>
+			<a href = https://plus.google.com/u/0/+VamsiYs target = "blank"><img src = "..\images\googleplus-icon.png" width = "45px" height = "45px" class = "img"></a>
+			<a href = http://in.linkedin.com/pub/vamsi-yerramilli/86/647/694/ target = "blank"><img src = "..\images\linkedin-icon.png" width = "45px" height = "45px" class = "img"></a>
+			<a href = http://vamsiys.wordpress.com/ target = "blank"><img src = "..\images\wordpressLogoSolo.png" width = "45px" height = "45px" class = "img"></a>		
+		</div>
+		
+		<div class = "DesignedBy">
+			<p> Designed and Developed by: Y.S.Vamsi</p>
+		</div>
+		
+</html>
