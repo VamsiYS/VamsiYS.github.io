@@ -68,20 +68,25 @@ hr {
   font-family: 'Roboto', sans-serif;
 }
 
+.jumbotron .head {
+	font-size: 20px;
+
+}
+
 .jumbotron p {
-  font-size: 20px;
+  font-size: 15px;
   font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .jumbotron a {
   color: #007bb2;
-  font-size: 22px;
+  font-size: 17px;
   font-family: 'Roboto', sans-serif;
 }
 
