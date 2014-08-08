@@ -70,53 +70,49 @@ hr {
 
 .jumbotron h1 {
   color: #cb0404;
-  font-size: 45px;  
+  font-size: 40px;  
   font-family: 'Exo 2', sans-serif;
   font-weight: bold;
 }
 
 .jumbotron p {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron h2 {
   font-family: 'Roboto', sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: bold;
 }
 
 .jumbotron h3 {
   font-family: 'Roboto', sans-serif;
-  font-size: 30px;
+  font-size: 25px;
   font-weight: bold;
 }
 
 .jumbotron a {
   color: #007bb2;
-  font-size: 22px;
+  font-size: 18px;
   font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron li  {
-  font-size: 20px;
+  font-size: 16px;
   font-family: 'Roboto', sans-serif;
 
 }
 
-.jumbotron p {
-  font-size: 20px;
-  font-family: 'Roboto', sans-serif;
-}
 
 .jumbotron .disclaimer {
 	color: #cb0404;
-	font-size: 24px;
+	font-size: 20px;
 	font-family: 'Roboto', sans-serif;
 }
 
 .jumbotron .phew {
-	font-size: 22px;
+	font-size: 20px;
 
 }
 
